@@ -41,7 +41,7 @@ while True:
 
         current_forecast = json.loads(weather)["properties"]["periods"][0]["shortForecast"]
         current_temperature = json.loads(weather)["properties"]["periods"][0]["temperature"]
-        current_wind = json.loads(weather)["properties"]["periods"][0]["windSpeed"]
+        current_wind = json.loads(weather)["properties"]["periods"][0]["windSpeed"] + " " + json.loads(weather)["properties"]["periods"][0]["windDirection"]
 
         hits.update({"weather_forecast": current_forecast})
         hits.update({"weather_temperature": current_temperature})
